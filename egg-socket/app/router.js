@@ -9,4 +9,5 @@ module.exports = app => {
 
   // socket.io 的路由
   io.route('chat', io.controller.chat.testChat);
+  io.of('/chat').route('chat', io.controller.chat.testChat);
 };
