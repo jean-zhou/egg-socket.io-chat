@@ -18,6 +18,24 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.customLoaderio = {
+    init: {}, // passed to engine.io
+    namespace: {
+      '/': {
+        connectionMiddleware: [],
+        packetMiddleware: [],
+      },
+      '/example': {
+        connectionMiddleware: [],
+        packetMiddleware: [],
+      },
+    },
+    redis: {
+      host: '127.0.0.1',
+      port: 6379,
+    },
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
