@@ -1,7 +1,7 @@
 (function () {
   console.log('asdasd')
 
-  const socket = io.connect('http://127.0.0.1:7001/chat')
+  const socket = io.connect('http://127.0.0.1:3000')
   console.log('socket ----', socket)
   socket.on('connect', () => {
     console.log('如果链接成功则打印 ----')
