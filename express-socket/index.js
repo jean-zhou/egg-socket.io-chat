@@ -11,6 +11,7 @@ io.on('connection', function(socket) {
 
   socket.on('chat', function(msg) {
     console.log('msg', msg)
+    socket.emit('res', 'hello')
   })
 })
 

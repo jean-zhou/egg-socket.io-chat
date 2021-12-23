@@ -8,6 +8,11 @@ module.exports = app => {
   router.get('/', controller.home.index);
 
   // socket.io 的路由
-  io.route('chat', io.controller.chat.testChat);
-  io.of('/chat').route('chat', io.controller.chat.testChat);
+  // io.route('chat', io.controller.chat.testChat);
+  // io.of('/chat').route('chat', io.controller.chat.testChat);
+  // app.io.of('/')
+  io.route('chat', io.controller.chat.index);
+
+  // app.io.of('/chat')
+  io.of('/chat').route('chat', io.controller.chat.index);
 };

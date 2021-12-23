@@ -25,6 +25,10 @@ module.exports = appInfo => {
         connectionMiddleware: [ 'connection' ],
         packetMiddleware: [],
       },
+      '/chat': {
+        connectionMiddleware: [ 'connection' ],
+        packetMiddleware: [],
+      },
     },
     redis: {
       host: '127.0.0.1',
