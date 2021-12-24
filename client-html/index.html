@@ -6,13 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>egg-socket-chat</title>
+  <link rel="stylesheet" href="./style.css">
   <script src="./lib/socket.io.js"></script>
 
 </head>
 
 <body>
-  test client
+  <!-- <div id="loginbox"> -->
+  <div id="loginbox" style="display: none;">
+    <div style="width: 260px; margin: 200px auto">
+      <h3>请输入昵称</h3>
+      <input type="text" placeholder="请输入用户名" id="username" name="username">
+      <input type="button" value="提交" onclick="Chat.submitUsername()">
+    </div>
+  </div>
 
+  <!-- <div id="chatbox" style="display: none;"> -->
+  <div id="chatbox">
+    <!-- 顶部 -->
+    <div class="header">
+      <span style="margin-left: 10px; ">socket 多人聊天室</span>
+      <span style="float: right; margin-right: 10px;">
+        <span id="showUsername"></span> |
+        <a href="javascript:;" id='logout' onclick="Chat.logout()">退出</a>
+      </span>
+    </div>
+    <!-- 内容区 -->
+    <div id="content">
+      <div id="message-box">
+        <div id="onLintCount">
+          <!-- 在线人数 -->
+        </div>
+      </div>
+
+      <!-- 底部输入框 -->
+      <div class="input-box">
+        <div class="input">
+          <input type="text" id="content-words" maxlength="150" placeholder="请输入聊天内容，按Enter提交">
+        </div>
+
+        <div class="action">
+          <button onclick="Chat.submitContent()">提交</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./client.js"></script>
 </body>
 
