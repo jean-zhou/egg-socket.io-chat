@@ -69,6 +69,11 @@
       this.socket.on('message', (msg) => {
         _this.showMassages(msg)
       })
+
+      // 监听用户退出
+      this.socket.on('logout', (o) => {
+        _this.updateSysMsg(o, 'logout')
+      })
     },
     showMassages(msg) {
       _this = this
@@ -107,6 +112,9 @@
     logout() {
       // 退出
       console.log('退出 --- ')
+      // this.socket.emit('disconnect') // 退出的 disconnect 是系统自带的
+      // 退出只是简单的刷新
+      location.reload()
     },
 
     submitUsername() {
@@ -141,6 +149,6 @@
     },
   }
   // 本地调试
-  let username = 'jean'
-  Chat.init(username)
+  // let username = 'jean'
+  // Chat.init(username)
 })()

@@ -122,5 +122,11 @@ section,div.robot {
 }
 ```
 
+### 7，不同的html更新不一样
 
+如果是页面一开始就有的信息，就需要使用innerHtml 去更新它的html文字
+
+但是如果不是页面已有的信息，而是新加的信息，就需要使用createElement 去添加页面的html元素
+
+—— 所以注意页面的html设计
 
