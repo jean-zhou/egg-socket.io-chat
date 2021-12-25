@@ -113,10 +113,11 @@ section .msg-system {
   clear: both;
 }
 
-section.user, section.service {
-  padding: 10px;
-  clear: both;
+section,div.robot {
+  padding:10px;
+  clear:both;
 }
+
 /* 用户自己发的消息 */
 section.user {
   float: right;

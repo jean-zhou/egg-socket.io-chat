@@ -111,5 +111,16 @@ body {
 
 但是参考项目是内容超过视口才开始有滚动条 —— 不知道是如何做的
 
+### 6，div.robot 是什么语法
+
+给 div.robot  清除浮动
+
+```js
+section,div.robot {
+  padding:10px;
+  clear:both;
+}
+```
+
 
 
