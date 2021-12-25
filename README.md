@@ -1,17 +1,9 @@
 # egg-socket.io-chat
+服务端 - express-socket
+1，安装express，socket.io
+2，在 express-socket 文件下运行 node index.js
 
-# 使用 express 搭建后台和html搭建前端 —— 可以链接socket
-
-## 前端使用 socket.io 链接 socket 后台
-项目文件：client-html
-1，直接使用html即可
-2，引入 socket.io 库
-3，链接后端端口 io.connect('http://127.0.0.1:3000')
-
-## 使用 express+ socket.io 搭建socket后台
-项目文件：express-socket
-1，安装 express + socket.io
-2，创建index.js 链接 socket
-
-
-# 使用 egg-socket.io搭建后台 egg-socket-client 搭建前端 —— 不能链接socket
+客户端 - client-html
+1，在client.js 文件 修改客户端监听的端口，默认是 http://127.0.0.1:3001
+io.connect('http://127.0.0.1:3001')
+2，浏览器打开 index.html
